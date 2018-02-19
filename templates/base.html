@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MY BOOKS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<span class="avatar"><img src="{% static "images/avatar.jpg" %}" alt="" /></span>
+						<h1>“Good friends, good books, and a sleepy conscience: this is the ideal life.” <br /> ― Mark Twain</h1>
+						<ul class="icons">
+							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+							<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+					</header>
+
+				<!-- Main -->
+					<section id="main">
+					    
+					    <section class="thumbnails">
+					        
+							{% block content %}
+                            {% endblock %}
+					
+							</section>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static "assets/js/jquery.min.js" %}"></script>
+			<script src="{% static "assets/js/jquery.poptrox.min.js" %}"></script>
+			<script src="{% static "assets/js/skel.min.js" %}"></script>
+			<script src="{% static "assets/js/main.js" %}"></script>
+
+	</body>
+</html>
