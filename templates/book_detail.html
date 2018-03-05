@@ -1,7 +1,15 @@
-% extends 'mainapp/base.html' %}
-
+{% extends 'base.html' %}
+{% load staticfiles %}
+	
 {% block content %}
-    <div>
-        <h1>{{ book.text}}</h1>
-    </div>
+
+      <div>
+            <a href="images/ht.jpg">
+                <img src="{% static "images/ht.jpg" %}" alt="" />
+                </a>  
+                <h1><a href="">{{ book.name }}</a></h1>
+                <h1 style="border:1px solid white;">{{ book.text }}</h1>
+     
+        </div>
+    
 {% endblock %}

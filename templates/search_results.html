@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}   
+
+        <p>You searched for: <strong> {{ query }} </strong> </p>
+   
+        {% if books %}           
+            <p style="margin-left:10px; ">Found {{ books|length }} book{{ books|pluralize }}.</p>
+            <ul>               
+                {% for book in books %}               
+                <li style="display:inline-block; padding:5px; border:1px solid white;">{{ book.name }}</li> 
+                {% endfor %}           
+            </ul>
+            
+        {% else %}           
+            <p>No books</p>       
+        {% endif %}
+        
+{% endblock %}
